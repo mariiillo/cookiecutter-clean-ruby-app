@@ -1,16 +1,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "cookiecutter/clean/ruby/app/version"
+require "{{cookiecutter.module_name}}/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = {{cookiecutter.gem_name}}
+  spec.name          = '{{cookiecutter.gem_name}}'
   spec.version       = {{cookiecutter.module_name}}::VERSION
-  spec.authors       = [{{cookiecutter.author_name}}]
-  spec.email         = [{{cookiecutter.author_email}}]
+  spec.authors       = ['{{cookiecutter.author_name}}']
+  spec.email         = ['{{cookiecutter.author_email}}']
 
-  spec.summary       = {{cookiecutter.summary}}
-  spec.description   = {{cookiecutter.short_description}}
+  spec.summary       = '{{cookiecutter.summary}}'
+  spec.description   = '{{cookiecutter.short_description}}'
   spec.homepage      = "http://www.github.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}"
   spec.license       = "MIT"
 

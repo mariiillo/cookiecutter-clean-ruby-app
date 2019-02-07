@@ -1,3 +1,3 @@
 module {{cookiecutter.module_name}}
-  VERSION = {{cookiecutter.version}}
+  VERSION = '{{cookiecutter.version}}'
 end
