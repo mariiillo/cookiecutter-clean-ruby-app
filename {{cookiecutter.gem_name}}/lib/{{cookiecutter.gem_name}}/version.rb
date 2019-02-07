@@ -1,3 +1,3 @@
-module {{cokkiecutter.module_name}}
+module {{cookiecutter.module_name}}
   VERSION = {{cookiecutter.version}}
 end
