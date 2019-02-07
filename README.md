@@ -22,7 +22,9 @@ As a rule:
 As Uncle Bob says: "This layer is where all the details go. The Web is a detail. The database is a detail. We keep these things on the outside where they can do little harm."
 
 ### Dependencies
-Each layer is only allowed to depend on inner layers, i.e. Infrastructure => Delivery => Use Cases => Entities
+Each layer is only allowed to depend on inner layers, i.e. Infrastructure => Adapters => Use Cases => Entities
+Of course, a use case must pass the results to the presenter so they can be later on be returned to the user. If a use case calls directly to a Presenter, or in other words, if there is a reference to objects in the Adapters layer, the dependency rule will be violated.
+The solution to this architectural problem comes thanks to the [Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle), a.k.a DIP, which allows in this cases, that a use case can receive as paramenter an instance of an object from the outer layer, and then it can send messages to it. The final workflow is the same, but the difference is that the use case does not [know nothing](https://33.media.tumblr.com/7469601972f65e2b2adb5f8aa5e846a5/tumblr_nda8fsYNKr1tfg6t4o1_500.gif) about that class from the Adapters layer, it just sends a message to some object that is supposed to be a presenter. [Duck Typing FTW](https://en.wikipedia.org/wiki/Duck_typing)
 
 ## Project Structure
 The generated project is tailored following the rules and guidelines of what Uncle Bob recommended in [his Post](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
