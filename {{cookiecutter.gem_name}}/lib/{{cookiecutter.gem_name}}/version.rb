@@ -1,3 +1,3 @@
 module {{cokkiecutter.module_name}}
-  VERSION = '0.1.0'
+  VERSION = {{cookiecutter.version}}
 end

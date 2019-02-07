@@ -1,8 +1,9 @@
 {
   "gem_name": "",
-  "module_name" : "",
+  "module_name" : "{{cookiecutter.gem_name.capitalize()}}",
+  "version": "0.1.0",
   "github_user" : "emeve89",
-  "repo_name": "",
+  "repo_name": "{{cookiecutter.gem_name}}",
   "app_title": "",
   "short_description": "",
   "summary": "",
