@@ -44,3 +44,6 @@ $ cookiecutter gh:emeve89/cookiecutter-clean-ruby-app
 ```
 
 You will be asked to input some parameters needed to completely set up the application.
+
+### Pre Conditions
+While bootstrapping the application, you'll need to input a name of a github repository, so that cookiecutter can configure the local repository (but also commit/push the new files created to the remote repository).
